@@ -15,16 +15,23 @@ def make_first_move
   pos+=1
   end
   # puts "Array size = #{@arr.size}"
+  try_column
   make_move
+end
+
+def try_column
+  # this will try the first unfilled column
+  puts @arr[0]
+
 end
 
 def make_move
 
   loc = rand(@arr.length)
   place = @arr[loc]
-  puts 'herrrrr'
+  # puts 'herrrrr'
   # puts place
-  place
+  puts place
 end
 
 loop do
@@ -37,6 +44,6 @@ loop do
   end
 
   @top_row = @game_state["board"][0] # gives top array
-  puts make_first_move
+  make_first_move
   # puts "Move: #{move}"
 end
